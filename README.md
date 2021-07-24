@@ -10,3 +10,7 @@ The Musical Performance ontology module models concepts and relationships for re
   -  In which buildings was a musical composition performed for the first time?
 - Which performers (musicians, singers) have performed a musical composition?
   - Which performers (musicians, singers) have performed a musical composition for the first time?
+
+## Imported ontology modules
+The Musical Performance ontology modules imports the following modules:
+- [Musical Composition](https://github.com/polifonia-project/musical-composition/)
