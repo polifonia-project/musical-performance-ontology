@@ -81,6 +81,7 @@
     <!-- https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/core/TimeIndexedSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasPlace"/>
