@@ -13,4 +13,5 @@ The Musical Performance ontology module models concepts and relationships for re
 
 ## Imported ontology modules
 The Musical Performance ontology modules imports the following modules:
+- [Core](https://github.com/polifonia-project/core/)
 - [Musical Composition](https://github.com/polifonia-project/musical-composition/)
