@@ -12,6 +12,6 @@ The Musical Performance ontology module of the [Polifonia ontology network](http
   - Which performers (musicians, singers) have performed a musical composition for the first time?
 
 ## Imported ontology modules
-The Musical Performance ontology modules imports the following modules:
+The Musical Performance ontology module imports the following modules:
 - [Core](https://github.com/polifonia-project/core/)
 - [Musical Composition](https://github.com/polifonia-project/musical-composition/)
