@@ -1,0 +1,6 @@
+@prefix ex: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
+@prefix mp: <https://w3id.org/polifonia/ON/musical-performance/> .
+@prefix core: <https://w3id.org/polifonia/ON/core/> .
+
+ex:Toxicity mp:isInvolvedInMusicalPerformance ex:SystemOfADown-FirenzeRocks2017 . 
+ex:SystemOfADown-FirenzeRocks2017 core:hasPlace ex:Florence .
