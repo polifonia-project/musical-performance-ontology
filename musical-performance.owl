@@ -37,6 +37,18 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/musical-performance/hasRecordingPlace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasRecordingPlace">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/musical-performance/isRecordingPlaceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/core/Place"/>
+        <rdfs:comment xml:lang="en">This property directly links a recording to the place(s) where it was recorded, ignoring additional details about the recording process and its possible sessions.</rdfs:comment>
+        <rdfs:label xml:lang="en">has recording place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/musical-performance/hasSession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasSession">
@@ -75,6 +87,16 @@
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/RecordingProcess"/>
         <rdfs:label xml:lang="en">is recorded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/isRecordingPlaceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/isRecordingPlaceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/core/Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:label xml:lang="en">is recording place of</rdfs:label>
     </owl:ObjectProperty>
     
 
