@@ -25,6 +25,18 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/core/hasPlace -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasPlace"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasTimeInterval"/>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/musical-performance/hasSession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasSession">
@@ -52,6 +64,17 @@
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-composition/MusicalComposition"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance"/>
         <rdfs:label xml:lang="en">is involved in musical performance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/isRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/isRecordedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/musical-performance/records"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/RecordingProcess"/>
+        <rdfs:label xml:lang="en">is recorded by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -87,6 +110,16 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/musical-performance/records -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/records">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/RecordingProcess"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance"/>
+        <rdfs:label xml:lang="en">records</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -116,6 +149,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Place -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Place"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Situation"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/TimeIndexedSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/TimeIndexedSituation"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/TimeInterval"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-composition/MusicalComposition -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-composition/MusicalComposition"/>
     
 
 
