@@ -25,6 +25,12 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/core/hasAgentRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasAgentRole"/>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/core/hasPlace -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasPlace"/>
@@ -34,6 +40,18 @@
     <!-- https://w3id.org/polifonia/ON/core/hasTimeInterval -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasTimeInterval"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasTitle -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasTitle"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasType"/>
     
 
 
@@ -79,6 +97,16 @@
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/RecordingProcess"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Session"/>
         <rdfs:label xml:lang="en">has session</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/hasSessionType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasSessionType">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Session"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+        <rdfs:label xml:lang="en">has session type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -220,6 +248,18 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/core/AgentRole -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/AgentRole"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Collection"/>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/core/Place -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Place"/>
@@ -241,6 +281,18 @@
     <!-- https://w3id.org/polifonia/ON/core/TimeInterval -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/TimeInterval"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Title -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Title"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Type"/>
     
 
 
@@ -395,6 +447,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/EditingSession">
         <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+        <rdfs:label xml:lang="en">Editing session</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -403,6 +456,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/MixdownSession">
         <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+        <rdfs:label xml:lang="en">Mixdown session</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -411,6 +465,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/RecordingSession">
         <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+        <rdfs:label xml:lang="en">Recording session</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
