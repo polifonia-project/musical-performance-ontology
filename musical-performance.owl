@@ -49,6 +49,17 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/musical-performance/hasRecording -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasRecording">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/musical-performance/isRecordingIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Release"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:label xml:lang="en">has recording</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/musical-performance/hasRecordingPlace -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/hasRecordingPlace">
@@ -111,6 +122,16 @@
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/MusicalPerformance"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/RecordingProcess"/>
         <rdfs:label xml:lang="en">is recorded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/isRecordingIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/musical-performance/isRecordingIn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Release"/>
+        <rdfs:label xml:lang="en">is recording in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -259,6 +280,12 @@
     <!-- https://w3id.org/polifonia/ON/musical-performance/Recording -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/Recording">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasTitle"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/core/Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Recording</rdfs:label>
     </owl:Class>
     
@@ -279,17 +306,112 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ON/musical-performance/Release -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/Release">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/core/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasTitle"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/core/Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Release</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/polifonia/ON/musical-performance/Session -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/Session">
         <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/core/TimeIndexedSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasPlace"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/core/PhysicalSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasTimeInterval"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/core/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/SessionType -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/SessionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/core/Type"/>
+        <rdfs:label xml:lang="en">Session type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/SoundRecording -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/SoundRecording">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:label xml:lang="en">Sound recording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/VideoRecording -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-performance/VideoRecording">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/musical-performance/Recording"/>
+        <rdfs:label xml:lang="en">Video recording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/EditingSession -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/EditingSession">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/MixdownSession -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/MixdownSession">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-performance/RecordingSession -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ON/musical-performance/RecordingSession">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ON/musical-performance/SessionType"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
