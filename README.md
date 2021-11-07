@@ -15,3 +15,5 @@ The Musical Performance ontology module of the [Polifonia ontology network](http
 The Musical Performance ontology module imports the following modules:
 - [Core](https://github.com/polifonia-project/core/)
 - [Musical Composition](https://github.com/polifonia-project/musical-composition/)
+<img width="824" alt="mp-performers" src="https://user-images.githubusercontent.com/44606644/140661850-0eaa057f-72cd-4fbe-8296-d26fa59eead1.png">
+<img width="825" alt="mp-recording" src="https://user-images.githubusercontent.com/44606644/140661854-4e620466-ec33-4997-b07e-ccb141009124.png">
