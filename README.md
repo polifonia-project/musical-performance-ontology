@@ -1,5 +1,5 @@
 # Musical Performance
-The Musical Performance ontology module of the [Polifonia ontology network](https://github.com/polifonia-project/ON) models concepts and relationships for representing musical performances and music-related events. 
+The Musical Performance ontology module of the [Polifonia ontology network](https://github.com/polifonia-project/ontology-network) models concepts and relationships for representing musical performances and music-related events. 
 
 ## Competency questions addressed by this ontology module 
 
