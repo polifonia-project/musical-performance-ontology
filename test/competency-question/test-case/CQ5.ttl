@@ -4,7 +4,7 @@
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
 @prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
  
-tc:CQ1.ttl a owlunit:CompetencyQuestionVerification ; 
+tc:CQ5.ttl a owlunit:CompetencyQuestionVerification ; 
       owlunit:hasCompetencyQuestion "Where was a musical composition performed for the first time? " ; 
       owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place . ?performance mp:firstPerformanceOfMusicalComposition ?firstComposition . FILTER (?firstComposition = true )}  " ; 
       owlunit:hasInputData td:CQ5TD.ttl ; 
