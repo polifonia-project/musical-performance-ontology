@@ -1,0 +1,13 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
+#@prefix mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
+@prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
+ 
+tc:CQ12.ttl a owlunit:CompetencyQuestionVerification ; 
+      owlunit:hasCompetencyQuestion "What is the role of the agent that took part in the session? " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/> PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/> SELECT DISTINCT ?role WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasRole ?role .}  " ; 
+      owlunit:hasInputData td:CQ12TD.ttl ; 
+      owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"role\" ] } ,  \"results\": {  \"bindings\": [ {  \"role\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Performer\" } } ] } } "; 
+      owlunit:testsOntology mp: . 
