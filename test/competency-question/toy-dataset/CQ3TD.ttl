@@ -4,6 +4,6 @@
 @prefix core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/> .
 
 td:Toxicity mp:hasSession td:BohemianRhapsody2017 . 
-td:SystemOfADown-FirenzeRocks2017 core:hasAgentRole td:AR2017 .
+td:BohemianRhapsody2017 core:hasAgentRole td:AR2017 .
 td:AR2017 core:hasAgent td:Freddie_Mercury .
 td:AR2017 core:hasRole td:Performer. 
