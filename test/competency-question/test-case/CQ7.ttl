@@ -9,5 +9,5 @@ tc:CQ7.ttl a owlunit:CompetencyQuestionVerification ;
       owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?musicalPerformance WHERE { ?recProcess mp:records ?musicalPerformance . }  " ; 
       owlunit:hasInputData td:CQ7TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
-      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"musicalPerformance\" ] } ,  \"results\": {  \"bindings\": [ {  \"musicalPerformance\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Bohemian_Rhapsody\" } } ] } } "; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"musicalPerformance\" ] } ,  \"results\": {  \"bindings\": [ {  \"musicalPerformance\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Bohemian_Rhapsody_2017\" } } ] } } "; 
       owlunit:testsOntology mp: . 
