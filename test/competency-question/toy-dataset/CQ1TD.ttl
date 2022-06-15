@@ -2,5 +2,5 @@
 @prefix mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl/> .
 @prefix core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/> .
 
-td:Toxicity mp:isMusicalPerformanceRecordedBy td:SystemOfADown-FirenzeRocks2017 . 
+td:Toxicity mp:isInvolvedInMusicalPerformance td:SystemOfADown-FirenzeRocks2017 . 
 td:SystemOfADown-FirenzeRocks2017 core:hasPlace td:Florence .
