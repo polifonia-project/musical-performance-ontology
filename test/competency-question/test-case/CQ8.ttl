@@ -1,0 +1,13 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
+#@prefix mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
+@prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
+ 
+tc:CQ8.ttl a owlunit:CompetencyQuestionVerification ; 
+      owlunit:hasCompetencyQuestion "In which release does a recording that is produced by a recording process belong to?" ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?release WHERE { ?recProcess mp:producesRecording ?recording . ?recording mp:isRecordingIn ?release .  }  " ; 
+      owlunit:hasInputData td:CQ8TD.ttl ; 
+      owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"release\" ] } ,  \"results\": {  \"bindings\": [ {  \"release\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Bohemian_Rhapsody_WorldTour\" } } ] } } "; 
+      owlunit:testsOntology mp: . 
