@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
+@prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
+ 
+tc:CQ15.ttl a owlunit:CompetencyQuestionVerification ; 
+      owlunit:hasCompetencyQuestion "In which city is a session recorded? " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  SELECT DISTINCT ?place WHERE { ?session core:hasPlace ?place . }  " ; 
+      owlunit:hasInputData td:CQ15TD.ttl ; 
+      owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/London\" } } ] } } "; 
+      owlunit:testsOntology mp: . 
