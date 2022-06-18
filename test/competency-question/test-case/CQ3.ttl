@@ -1,12 +1,11 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
-#@prefix mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl> .
-@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
 @prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
  
 tc:CQ3.ttl a owlunit:CompetencyQuestionVerification ; 
       owlunit:hasCompetencyQuestion "Which performers have performed a musical composition? " ; 
-      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/> PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/> SELECT DISTINCT ?agent WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasAgent ?agent. ?agentRole core:hasRole ?role . filter (contains(str(?uri), "Performer"))}  " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasAgent ?agent. ?agentRole core:hasRole ?role . filter (contains(str(?uri), "Performer"))}  " ; 
       owlunit:hasInputData td:CQ3TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
       owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"agent\" ] } ,  \"results\": {  \"bindings\": [ {  \"agent\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Freddie_Mercury\" } } ] } } "; 
