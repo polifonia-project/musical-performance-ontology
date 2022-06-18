@@ -3,4 +3,5 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 td:Bohemian_Rhapsody a mp:Recording . 
-td:Bohemian_Raphsody rdfs:subClassOf mp:SoundRecording .
+td:Bohemian_Raphsody a mp:SoundRecording .
+mp:SoundRecording rdfs:subClassOf mp:Recording .
