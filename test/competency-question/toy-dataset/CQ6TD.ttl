@@ -1,4 +1,4 @@
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
-@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 
 td:BohemianRhapsody2017 mp:producesRecording td:Bohemian_Rhapsody .
