@@ -5,7 +5,7 @@
  
 tc:CQ3.ttl a owlunit:CompetencyQuestionVerification ; 
       owlunit:hasCompetencyQuestion "Which performers have performed a musical composition? " ; 
-      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE { ?recProcess mp:hasSession ?session . ?session core:hasAgentRole ?agentRole . ?agentRole core:hasAgent ?agent . ?agentRole core:hasRole ?role . FILTER regex(?role, "Performer") } " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE { ?recProcess mp:hasSession ?session . ?session core:hasAgentRole ?agentRole . ?agentRole core:hasAgent ?agent . ?agentRole core:hasRole ?role . FILTER regex(?role, "Performer" , "i") } " ; 
       owlunit:hasInputData td:CQ3TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
       owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"agent\" ] } ,  \"results\": {  \"bindings\": [ {  \"agent\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Freddie_Mercury\" } } ] } } "; 
