@@ -1,5 +1,5 @@
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
-@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 @prefix core: <https://w3id.org/polifonia/ontology/core/> .
 
 td:Toxicity mp:hasSession td:BohemianRhapsody2017 . 
