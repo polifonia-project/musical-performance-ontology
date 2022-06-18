@@ -5,8 +5,7 @@
  
 tc:CQ20.ttl a owlunit:CompetencyQuestionVerification ; 
       owlunit:hasCompetencyQuestion "Which is the type of the recording? " ; 
-      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?type WHERE { ?recording a mp:Recording . ?recording a ?type  . 
-?type rdfs:subClassOf mp:Recording .}  " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?type WHERE { ?recording a mp:Recording . ?recording a ?type  . ?type rdfs:subClassOf mp:Recording .}  " ; 
       owlunit:hasInputData td:CQ20TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
       owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"type\" ] } ,  \"results\": {  \"bindings\": [ {  \"type\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/SoundRecording\" } } ] } } "; 
