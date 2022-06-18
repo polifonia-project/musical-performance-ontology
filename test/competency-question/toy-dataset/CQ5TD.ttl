@@ -4,4 +4,4 @@
 
 td:Toxicity mp:isInvolvedInMusicalPerformance td:SystemOfADown-FirenzeRocks2017 . 
 td:SystemOfADown-FirenzeRocks2017 core:hasPlace td:Florence .
-td:SystemOfADown-FirenzeRocks2017 mp:firstPerformanceOfMusicalComposition "true" .
+td:SystemOfADown-FirenzeRocks2017 mp:firstPerformanceOfMusicalComposition true .
