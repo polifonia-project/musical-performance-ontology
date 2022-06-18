@@ -5,8 +5,8 @@
  
 tc:CQ15.ttl a owlunit:CompetencyQuestionVerification ; 
       owlunit:hasCompetencyQuestion "In which city is a session recorded? " ; 
-      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  SELECT DISTINCT ?place WHERE { ?session core:hasPlace ?place . }  " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?city WHERE { ?session core:hasPlace ?place . ?place core:hasAddress ?address . ?address core:hasCity ?city . }  " ; 
       owlunit:hasInputData td:CQ15TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
-      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/London\" } } ] } } "; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"city\" ] } ,  \"results\": {  \"bindings\": [ {  \"city\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/London\" } } ] } } "; 
       owlunit:testsOntology mp: . 
