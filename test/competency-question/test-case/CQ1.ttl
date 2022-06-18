@@ -1,5 +1,5 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
-@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/>
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
 @prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
  
