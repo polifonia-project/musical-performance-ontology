@@ -1,0 +1,6 @@
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+td:Bohemian_Rhapsody a mp:Recording . 
+td:Bohemian_Raphsody rdfs:subClassOf mp:SoundRecording .
