@@ -5,4 +5,3 @@
 
 td:Bohemian_Rhapsody a mp:Recording . 
 td:Bohemian_Raphsody a mp:SoundRecording .
-mp:SoundRecording rdfs:subClassOf mp:Recording .
