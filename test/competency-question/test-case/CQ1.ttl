@@ -8,5 +8,5 @@ tc:CQ1.ttl a owlunit:CompetencyQuestionVerification ;
       owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } " ; 
       owlunit:hasInputData td:CQ1TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
-      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Florence\" } } ] } } "; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Florence\" } } ] } } " ; 
       owlunit:testsOntology mp: . 
