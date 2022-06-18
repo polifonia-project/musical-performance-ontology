@@ -1,0 +1,9 @@
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix core: <https://w3id.org/polifonia/ontology/core/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+td:BohemianRhapsody2017 rdfs:type mp:Session .
+td:BohemianRhapsody2017 core:hasPlace td:London .
+td:London core:hasAddress td:LondonAddress . 
+td:LondonAddress core:streetNumber td:LondonCentralStreet18 .
