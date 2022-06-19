@@ -1,0 +1,10 @@
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix core: <https://w3id.org/polifonia/ontology/core/> .
+
+td:BRComposition mp:isInvolvedInMusicalPerformance td:BRPerformance .
+td:BRPerformance mp:isRecordedBy td:td:RecProcessBR .
+td:RecProcessBR mp:hasSession td:BohemianRhapsody2017 . 
+td:BohemianRhapsody2017 core:hasPlace td:London .
+td:London core:hasAddress td:LondonAddress .
+td:LondonAddress core:hasDenomination td:KesingtonPalace . 
