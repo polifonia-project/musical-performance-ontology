@@ -8,5 +8,5 @@ tc:CQ22.ttl a owlunit:CompetencyQuestionVerification ;
       owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/>  SELECT DISTINCT ?building WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance mp:isRecordedBy ?recActivity . ?recActivity mp:hasSession ?session . ?session core:hasPlace ?place . ?place core:hasAddress ?address. ?address core:hasDenomination ?building }  " ; 
       owlunit:hasInputData td:CQ22TD.ttl ; 
       owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
-      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"building\" ] } ,  \"results\": {  \"bindings\": [ {  \"building\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/PalazzoDelRè\" } } ] } } "; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"building\" ] } ,  \"results\": {  \"bindings\": [ {  \"building\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/KesingtonPalace\" } } ] } } "; 
       owlunit:testsOntology mp: . 
