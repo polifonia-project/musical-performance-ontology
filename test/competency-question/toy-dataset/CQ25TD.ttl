@@ -1,0 +1,11 @@
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix core: <https://w3id.org/polifonia/ontology/core/> .
+
+td:BohemianRhapsody2017-Toxicity a mp:MusicalPerformance .
+td:BohemianRhapsody2017-Toxicity mp:firstPerformanceOfMusicalComposition true .
+td:BohemianRhapsody2017-Toxicity mp:isRecordedBy td:Toxicity . 
+td:Toxicity mp:hasSession td:BohemianRhapsody2017 . 
+td:BohemianRhapsody2017 core:hasAgentRole td:AR2017 .
+td:AR2017 core:hasAgent td:Freddie_Mercury .
+td:AR2017 core:hasRole td:Singer . 
