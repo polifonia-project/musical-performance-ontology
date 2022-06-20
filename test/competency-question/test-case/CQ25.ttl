@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> . 
+@prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
+@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/toy-dataset/> .
+@prefix tc: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/competency-question/test-case/> .
+ 
+tc:CQ25.ttl a owlunit:CompetencyQuestionVerification ; 
+      owlunit:hasCompetencyQuestion "Which singers have performed a musical composition for the first time? " ; 
+      owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?singer WHERE { ?performance mp:isRecordedBy ?recProcess . ?recProcess mp:hasSession ?session . ?session core:hasAgentRole ?agentRole . ?agentRole core:hasRole ?role . ?performance mp:firstPerformanceOfMusicalComposition ?firstComposition . FILTER regex(?firstComposition, "true", "i") . FILTER regex(?role, "Singer" , "i") } " ; 
+      owlunit:hasInputData td:CQ25TD.ttl ; 
+      owlunit:hasInputTestDataCategory owlunit:ToyDataset ; 
+      owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"singer\" ] } ,  \"results\": {  \"bindings\": [ {  \"singer\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Freddie_Mercury\" } } ] } } "; 
+      owlunit:testsOntology mp: . 
